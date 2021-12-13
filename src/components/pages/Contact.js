@@ -7,7 +7,7 @@ const Contact = () => {
                 <h1>Contact Page</h1>
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <label >Email address</label>
                         <input
                             type="email"
                             class="form-control"
@@ -19,7 +19,7 @@ const Contact = () => {
                         </small>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
+                        <label >Password</label>
                         <input
                             type="password"
                             class="form-control"
@@ -32,7 +32,7 @@ const Contact = () => {
                             class="form-check-input"
                             id="exampleCheck1"
                         />
-                        <label class="form-check-label" for="exampleCheck1">
+                        <label class="form-check-label" >
                             Check me out
                         </label>
                     </div>
