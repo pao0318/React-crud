@@ -1,20 +1,32 @@
-import React from 'react';
-import './App.css';
-import "../node_modules/bootstrap/dist/css/bootstrap.css"
-import Home from './components/pages/Home'
-import Contact from './components/pages/Contact'
-import About from './components/pages/About';
-import Navbar from './components/layout/Navbar';
+import React from "react";
+import "./App.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Navbar from "./components/layout/Navbar";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
+import NotFound from "./components/pages/NotFound";
+
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-      <Contact />
-      <About />
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
 
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
